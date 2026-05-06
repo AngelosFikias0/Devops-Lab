@@ -1,0 +1,41 @@
+# .dockerignore
+# Excludes files from the build context sent to the Docker daemon.
+# Smaller context = faster builds. Prevents leaking secrets into images.
+
+# Version control
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info
+dist/
+build/
+.venv/
+venv/
+
+# Local env files — never copy these into an image
+.env
+*.env
+.env.*
+
+# Editor artifacts
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Test artifacts
+.pytest_cache/
+coverage/
+.coverage
+htmlcov/
+
+# Docs — not needed in the image
+README.md
+*.md
